@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, r'C:\Users\DarrenPC\Desktop\sphinx\scripts')
+sys.path.insert(0, '../scripts')
 
 
 # -- Project information -----------------------------------------------------
