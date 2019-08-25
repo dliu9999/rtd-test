@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>bpd module &#8212; Test_Sphinx 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="scripts" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="scripts"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Test_Sphinx 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-bpd">
+<span id="bpd-module"></span><h1>bpd module<a class="headerlink" href="#module-bpd" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bpd.DataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">bpd.</code><code class="sig-name descname">DataFrame</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Custom DataFrame Class; Pandas DataFrames with methods removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(2, 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(2, 4)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="bpd.DataFrame.append">
+<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append rows of other to the end of caller, returning a new object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.apply">
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">**kwds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a function along an axis of the DataFrame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.assign">
+<code class="sig-name descname">assign</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign new columns to a DataFrame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.describe">
+<code class="sig-name descname">describe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.describe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.describe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate descriptive statistics that summarize the central 
+tendency, dispersion and shape of a dataset’s distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.drop">
+<code class="sig-name descname">drop</code><span class="sig-paren">(</span><em class="sig-param">columns=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.drop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.drop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drop specified labels from rows or columns.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.from_records">
+<em class="property">classmethod </em><code class="sig-name descname">from_records</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">columns</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.from_records"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.from_records" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get item from object for given key (ex: DataFrame column).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.groupby">
+<code class="sig-name descname">groupby</code><span class="sig-paren">(</span><em class="sig-param">by=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.groupby"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.groupby" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group DataFrame or Series using a mapper or by a Series of columns.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.merge">
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">right</em>, <em class="sig-param">how='inner'</em>, <em class="sig-param">on=None</em>, <em class="sig-param">left_on=None</em>, <em class="sig-param">right_on=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge DataFrame or named Series objects with a database-style join.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the data in the DataFrame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.reset_index">
+<code class="sig-name descname">reset_index</code><span class="sig-paren">(</span><em class="sig-param">drop=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.reset_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.reset_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the index of the DataFrame, and use the default one 
+instead. If the DataFrame has a MultiIndex, this method can 
+remove one or more levels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">n=None</em>, <em class="sig-param">replace=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a random sample of items from an axis of object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.set_index">
+<code class="sig-name descname">set_index</code><span class="sig-paren">(</span><em class="sig-param">keys</em>, <em class="sig-param">drop=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.set_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.set_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.sort_values">
+<code class="sig-name descname">sort_values</code><span class="sig-paren">(</span><em class="sig-param">by</em>, <em class="sig-param">ascending=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.sort_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.sort_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort by the values along either axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.take">
+<code class="sig-name descname">take</code><span class="sig-paren">(</span><em class="sig-param">indices</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.take"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.take" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the elements in the given positional indices along an axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.to_csv">
+<code class="sig-name descname">to_csv</code><span class="sig-paren">(</span><em class="sig-param">path_or_buf=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.to_csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.to_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write object to a comma-separated values (csv) file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.to_df">
+<code class="sig-name descname">to_df</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.to_df"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.to_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the full pandas dataframe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrame.to_numpy">
+<code class="sig-name descname">to_numpy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrame.to_numpy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrame.to_numpy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the DataFrame to a NumPy array.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bpd.DataFrameGroupBy">
+<em class="property">class </em><code class="sig-prename descclassname">bpd.</code><code class="sig-name descname">DataFrameGroupBy</code><span class="sig-paren">(</span><em class="sig-param">groupby</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.aggregate">
+<code class="sig-name descname">aggregate</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.aggregate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.aggregate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.count">
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute count of group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.max">
+<code class="sig-name descname">max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute max of group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.mean">
+<code class="sig-name descname">mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.mean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute mean of group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.median">
+<code class="sig-name descname">median</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.median"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.median" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute median of group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.min">
+<code class="sig-name descname">min</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.min"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute min of group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.size">
+<code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute group sizes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.sum">
+<code class="sig-name descname">sum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.sum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute sum of group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.DataFrameGroupBy.to_gb">
+<code class="sig-name descname">to_gb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameGroupBy.to_gb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameGroupBy.to_gb" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the full pandas dataframe</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bpd.DataFrameIndexer">
+<em class="property">class </em><code class="sig-prename descclassname">bpd.</code><code class="sig-name descname">DataFrameIndexer</code><span class="sig-paren">(</span><em class="sig-param">indexer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#DataFrameIndexer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.DataFrameIndexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for lifting results of loc/iloc back to the
+custom DataFrame class.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bpd.Series">
+<em class="property">class </em><code class="sig-prename descclassname">bpd.</code><code class="sig-name descname">Series</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Custom Series class; Pandas Series with methods removed.</p>
+<dl class="method">
+<dt id="bpd.Series.abs">
+<code class="sig-name descname">abs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.abs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a Series with absolute numeric value of each element.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.apply">
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">**kwds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invoke function on values of Series.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.count">
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of observations in the Series</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.describe">
+<code class="sig-name descname">describe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.describe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.describe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate descriptive statistics that summarize the central tendency, 
+dispersion and shape of a dataset’s distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.max">
+<code class="sig-name descname">max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum of the values for the requested axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.mean">
+<code class="sig-name descname">mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.mean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the mean of the values for the requested axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.median">
+<code class="sig-name descname">median</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.median"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.median" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the median of the values for the requested axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.min">
+<code class="sig-name descname">min</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.min"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the minimum of the values for the requested axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the data in the DataFrame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.reset_index">
+<code class="sig-name descname">reset_index</code><span class="sig-paren">(</span><em class="sig-param">drop=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.reset_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.reset_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a new DataFrame or Series with the index reset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">n=None</em>, <em class="sig-param">replace=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a random sample of items from an axis of object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.sort_values">
+<code class="sig-name descname">sort_values</code><span class="sig-paren">(</span><em class="sig-param">ascending=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.sort_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.sort_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort by the values</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.sum">
+<code class="sig-name descname">sum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.sum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the sum of the values for the requested axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.take">
+<code class="sig-name descname">take</code><span class="sig-paren">(</span><em class="sig-param">indices</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.take"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.take" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the elements in the given positional indices along an axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.to_csv">
+<code class="sig-name descname">to_csv</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.to_csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.to_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write object to a comma-separated values (csv) file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.to_numpy">
+<code class="sig-name descname">to_numpy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.to_numpy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.to_numpy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A NumPy ndarray representing the values in this Series or Index.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bpd.Series.to_ser">
+<code class="sig-name descname">to_ser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#Series.to_ser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.Series.to_ser" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the full pandas series</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bpd.read_csv">
+<code class="sig-prename descclassname">bpd.</code><code class="sig-name descname">read_csv</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bpd.html#read_csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bpd.read_csv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">scripts</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bpd.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="scripts"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Test_Sphinx 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Darren.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.1.
+    </div>
+  </body>
+</html>
