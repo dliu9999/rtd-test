@@ -1,6 +1,8 @@
 BabyPandas
 ==========
 
+.. currentmodule:: bpd
+
 **Summary of methods for ``babypandas``. Click a method to see its documentation.**
 
 
