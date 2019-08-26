@@ -3,7 +3,7 @@ BabyPandas
 
 .. currentmodule:: bpd
 
-**Summary of methods for BabyPandas. Click a method to see its documentation.**
+**Summary of DataFrame methods for BabyPandas. Click a method to see its documentation.**
 
 
 **DataFrame**

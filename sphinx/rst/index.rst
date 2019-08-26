@@ -4,9 +4,11 @@ BabyPandas Documentation
 :Release: |release|
 :Date: |today|
 
-The ``babypandas`` is a ``pandas`` data-analysis library with a restricted API
+``babypandas`` is a ``pandas`` data-analysis library with a restricted API
 
+Reference
+---------
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
 
-   bpd
+   DataFrame
