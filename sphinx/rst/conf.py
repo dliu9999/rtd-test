@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, '../scripts')
+sys.path.insert(0, os.path.abspath('../scripts'))
 
 
 # -- Project information -----------------------------------------------------
@@ -33,6 +33,10 @@ master_doc = 'index'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinx.ext.autosummary']
+
+
+# Config autosummary
+autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
