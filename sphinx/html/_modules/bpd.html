@@ -100,6 +100,14 @@
 <div class="viewcode-block" id="DataFrame.take"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.take.html#bpd.DataFrame.take">[docs]</a>    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the elements in the given positional indices along an axis.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        indices: TODO</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">take</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">indices</span><span class="o">=</span><span class="n">indices</span><span class="p">)</span></div>
@@ -107,6 +115,11 @@
 <div class="viewcode-block" id="DataFrame.drop"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.drop.html#bpd.DataFrame.drop">[docs]</a>    <span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Drop specified labels from rows or columns.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``columns``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">drop</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span></div>
@@ -114,6 +127,12 @@
 <div class="viewcode-block" id="DataFrame.sample"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.sample.html#bpd.DataFrame.sample">[docs]</a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return a random sample of items from an axis of object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``n``: TODO</span>
+<span class="sd">            ``replace``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">sample</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">)</span></div>
@@ -121,6 +140,11 @@
 <div class="viewcode-block" id="DataFrame.get"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.get.html#bpd.DataFrame.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Get item from object for given key (ex: DataFrame column).</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``key``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span></div>
@@ -128,21 +152,38 @@
 <div class="viewcode-block" id="DataFrame.assign"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.assign.html#bpd.DataFrame.assign">[docs]</a>    <span class="k">def</span> <span class="nf">assign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Assign new columns to a DataFrame.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``kwargs``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">assign</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
     <span class="c1"># Transformation</span>
-<div class="viewcode-block" id="DataFrame.apply"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.apply.html#bpd.DataFrame.apply">[docs]</a>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrame.apply"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.apply.html#bpd.DataFrame.apply">[docs]</a>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Apply a function along an axis of the DataFrame.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``func``: TODO</span>
+<span class="sd">            ``axis``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">apply</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="DataFrame.sort_values"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.sort_values.html#bpd.DataFrame.sort_values">[docs]</a>    <span class="k">def</span> <span class="nf">sort_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Sort by the values along either axis.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``by``: TODO</span>
+<span class="sd">            ``ascending``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">sort_values</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">by</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="n">ascending</span><span class="p">)</span></div>
@@ -158,6 +199,11 @@
 <div class="viewcode-block" id="DataFrame.groupby"><a class="viewcode-back" href="../_autosummary/bpd.DataFrame.groupby.html#bpd.DataFrame.groupby">[docs]</a>    <span class="k">def</span> <span class="nf">groupby</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Group DataFrame or Series using a mapper or by a Series of columns.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``by``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">groupby</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">by</span><span class="p">)</span></div>
@@ -167,6 +213,11 @@
 <span class="sd">        Reset the index of the DataFrame, and use the default one </span>
 <span class="sd">        instead. If the DataFrame has a MultiIndex, this method can </span>
 <span class="sd">        remove one or more levels.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ``drop``: TODO</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TODO</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">reset_index</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="n">drop</span><span class="p">)</span></div>
@@ -219,7 +270,7 @@
 <span class="sd">    Custom Series class; Pandas Series with methods removed.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.__init__"><a class="viewcode-back" href="../_autosummary/bpd.Series.__init__.html#bpd.Series.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         
         <span class="c1"># hidden pandas dataeriesframe object</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -228,7 +279,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">loc</span> <span class="o">=</span> <span class="n">DataFrameIndexer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">loc</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">iloc</span> <span class="o">=</span> <span class="n">DataFrameIndexer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">iloc</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></div>
 
     <span class="c1"># Formatting</span>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -238,122 +289,122 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
 
     <span class="c1"># Selection</span>
-    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.take"><a class="viewcode-back" href="../_autosummary/bpd.Series.take.html#bpd.Series.take">[docs]</a>    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the elements in the given positional indices along an axis.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">take</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.sample"><a class="viewcode-back" href="../_autosummary/bpd.Series.sample.html#bpd.Series.sample">[docs]</a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return a random sample of items from an axis of object.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">sample</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">)</span></div>
 
     <span class="c1"># Transformation</span>
-    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.apply"><a class="viewcode-back" href="../_autosummary/bpd.Series.apply.html#bpd.Series.apply">[docs]</a>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Invoke function on values of Series.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">apply</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">sort_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.sort_values"><a class="viewcode-back" href="../_autosummary/bpd.Series.sort_values.html#bpd.Series.sort_values">[docs]</a>    <span class="k">def</span> <span class="nf">sort_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Sort by the values</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">sort_values</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="n">ascending</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="n">ascending</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.describe"><a class="viewcode-back" href="../_autosummary/bpd.Series.describe.html#bpd.Series.describe">[docs]</a>    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Generate descriptive statistics that summarize the central tendency, </span>
 <span class="sd">        dispersion and shape of a dataset’s distribution.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">describe</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">reset_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.reset_index"><a class="viewcode-back" href="../_autosummary/bpd.Series.reset_index.html#bpd.Series.reset_index">[docs]</a>    <span class="k">def</span> <span class="nf">reset_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Generate a new DataFrame or Series with the index reset.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">reset_index</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="n">drop</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="n">drop</span><span class="p">)</span></div>
 
     <span class="c1"># Plotting</span>
-    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.plot"><a class="viewcode-back" href="../_autosummary/bpd.Series.plot.html#bpd.Series.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Plot the data in the DataFrame.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">plot</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
     <span class="c1"># IO</span>
-    <span class="k">def</span> <span class="nf">to_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.to_csv"><a class="viewcode-back" href="../_autosummary/bpd.Series.to_csv.html#bpd.Series.to_csv">[docs]</a>    <span class="k">def</span> <span class="nf">to_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Write object to a comma-separated values (csv) file.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">to_csv</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">to_numpy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.to_numpy"><a class="viewcode-back" href="../_autosummary/bpd.Series.to_numpy.html#bpd.Series.to_numpy">[docs]</a>    <span class="k">def</span> <span class="nf">to_numpy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        A NumPy ndarray representing the values in this Series or Index.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
     <span class="c1"># Calculations</span>
-    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.count"><a class="viewcode-back" href="../_autosummary/bpd.Series.count.html#bpd.Series.count">[docs]</a>    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return number of observations in the Series</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.mean"><a class="viewcode-back" href="../_autosummary/bpd.Series.mean.html#bpd.Series.mean">[docs]</a>    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the mean of the values for the requested axis.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.median"><a class="viewcode-back" href="../_autosummary/bpd.Series.median.html#bpd.Series.median">[docs]</a>    <span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the median of the values for the requested axis.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">median</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.min"><a class="viewcode-back" href="../_autosummary/bpd.Series.min.html#bpd.Series.min">[docs]</a>    <span class="k">def</span> <span class="nf">min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the minimum of the values for the requested axis.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.max"><a class="viewcode-back" href="../_autosummary/bpd.Series.max.html#bpd.Series.max">[docs]</a>    <span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the maximum of the values for the requested axis.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.sum"><a class="viewcode-back" href="../_autosummary/bpd.Series.sum.html#bpd.Series.sum">[docs]</a>    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return the sum of the values for the requested axis.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Series.abs"><a class="viewcode-back" href="../_autosummary/bpd.Series.abs.html#bpd.Series.abs">[docs]</a>    <span class="k">def</span> <span class="nf">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Return a Series with absolute numeric value of each element.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">abs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
     <span class="c1"># Arithmetic</span>
     <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -444,54 +495,54 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
 
     <span class="c1"># Calculations</span>
-    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.count"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.count.html#bpd.DataFrameGroupBy.count">[docs]</a>    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute count of group.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.mean"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.mean.html#bpd.DataFrameGroupBy.mean">[docs]</a>    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute mean of group.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.median"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.median.html#bpd.DataFrameGroupBy.median">[docs]</a>    <span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute median of group.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">median</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.min"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.min.html#bpd.DataFrameGroupBy.min">[docs]</a>    <span class="k">def</span> <span class="nf">min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute min of group.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.max"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.max.html#bpd.DataFrameGroupBy.max">[docs]</a>    <span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute max of group.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.sum"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.sum.html#bpd.DataFrameGroupBy.sum">[docs]</a>    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute sum of group.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DataFrameGroupBy.size"><a class="viewcode-back" href="../_autosummary/bpd.DataFrameGroupBy.size.html#bpd.DataFrameGroupBy.size">[docs]</a>    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Compute group sizes.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">_lift_to_pd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pd</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">()</span></div>
     
 
 <span class="k">class</span> <span class="nc">DataFrameIndexer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>

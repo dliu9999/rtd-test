@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Series &#8212; Test_Sphinx 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="bpd.Series.__init__" href="_autosummary/bpd.Series.__init__.html" />
+    <link rel="prev" title="bpd.DataFrame.to_numpy" href="_autosummary/bpd.DataFrame.to_numpy.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="_autosummary/bpd.Series.__init__.html" title="bpd.Series.__init__"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="_autosummary/bpd.DataFrame.to_numpy.html" title="bpd.DataFrame.to_numpy"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Test_Sphinx 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="series">
+<h1>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h1>
+<p>Summary of Series methods for BabyPandas.</p>
+<p>Click a method to see its documentation.</p>
+<p>Creation</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.__init__.html#bpd.Series.__init__" title="bpd.Series.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.__init__</span></code></a>(**kwargs)</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Selection</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.take.html#bpd.Series.take" title="bpd.Series.take"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.take</span></code></a>(indices)</p></td>
+<td><p>Return the elements in the given positional indices along an axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.sample.html#bpd.Series.sample" title="bpd.Series.sample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.sample</span></code></a>([n, replace])</p></td>
+<td><p>Return a random sample of items from an axis of object.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Transformation</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.apply.html#bpd.Series.apply" title="bpd.Series.apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.apply</span></code></a>(func, **kwds)</p></td>
+<td><p>Invoke function on values of Series.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.sort_values.html#bpd.Series.sort_values" title="bpd.Series.sort_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.sort_values</span></code></a>([ascending])</p></td>
+<td><p>Sort by the values</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.describe.html#bpd.Series.describe" title="bpd.Series.describe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.describe</span></code></a>()</p></td>
+<td><p>Generate descriptive statistics that summarize the central tendency,  dispersion and shape of a dataset’s distribution.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.reset_index.html#bpd.Series.reset_index" title="bpd.Series.reset_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.reset_index</span></code></a>([drop])</p></td>
+<td><p>Generate a new DataFrame or Series with the index reset.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Plotting</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.plot.html#bpd.Series.plot" title="bpd.Series.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.plot</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Plot the data in the DataFrame.</p></td>
+</tr>
+</tbody>
+</table>
+<p>IO</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.to_csv.html#bpd.Series.to_csv" title="bpd.Series.to_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.to_csv</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Write object to a comma-separated values (csv) file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.to_numpy.html#bpd.Series.to_numpy" title="bpd.Series.to_numpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.to_numpy</span></code></a>()</p></td>
+<td><p>A NumPy ndarray representing the values in this Series or Index.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Calculations</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.count.html#bpd.Series.count" title="bpd.Series.count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.count</span></code></a>()</p></td>
+<td><p>Return number of observations in the Series</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.mean.html#bpd.Series.mean" title="bpd.Series.mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.mean</span></code></a>()</p></td>
+<td><p>Return the mean of the values for the requested axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.median.html#bpd.Series.median" title="bpd.Series.median"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.median</span></code></a>()</p></td>
+<td><p>Return the median of the values for the requested axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.min.html#bpd.Series.min" title="bpd.Series.min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.min</span></code></a>()</p></td>
+<td><p>Return the minimum of the values for the requested axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.max.html#bpd.Series.max" title="bpd.Series.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.max</span></code></a>()</p></td>
+<td><p>Return the maximum of the values for the requested axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/bpd.Series.sum.html#bpd.Series.sum" title="bpd.Series.sum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.sum</span></code></a>()</p></td>
+<td><p>Return the sum of the values for the requested axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/bpd.Series.abs.html#bpd.Series.abs" title="bpd.Series.abs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Series.abs</span></code></a>()</p></td>
+<td><p>Return a Series with absolute numeric value of each element.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="_autosummary/bpd.DataFrame.to_numpy.html"
+                        title="previous chapter">bpd.DataFrame.to_numpy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="_autosummary/bpd.Series.__init__.html"
+                        title="next chapter">bpd.Series.__init__</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Series.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="_autosummary/bpd.Series.__init__.html" title="bpd.Series.__init__"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="_autosummary/bpd.DataFrame.to_numpy.html" title="bpd.DataFrame.to_numpy"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Test_Sphinx 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Darren.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.1.
+    </div>
+  </body>
+</html>

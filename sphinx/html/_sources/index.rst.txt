@@ -12,3 +12,5 @@ Reference
    :maxdepth: 1
 
    DataFrame
+   Series
+   GroupBy
